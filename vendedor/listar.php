@@ -7,7 +7,9 @@
 
 <?php include_once "./header.php" ?>
 
-	<div class="col-xs-12">
+	<div class="container">
+		<div class="row">
+		<div class="col-xs-12">
 		<h1>Productos</h1>
 		<div>
 			<a class="btn btn-success" href="./formulario.php">Nuevo <i class="fa fa-plus"></i></a>
@@ -35,11 +37,13 @@
 					<td><?php echo $producto->precioCompra ?></td>
 					<td><?php echo $producto->precioVenta ?></td>
 					<td><?php echo $producto->existencia ?></td>
-					<td><a class="btn btn-warning" href="<?php echo "editar.php?id=" . $producto->id?>"><i class="fa fa-edit"></i></a></td>
-					<td><a class="btn btn-danger" href="<?php echo "eliminar.php?id=" . $producto->id?>"><i class="fa fa-trash"></i></a></td>
+					<td><a class="btn btn-warning" href="<?php echo "editar.php?id=" . $producto->id?>"><img src="../images/edit.png" alt=""> </a></td>
+					<td><a class="btn btn-danger" href="<?php echo "eliminar.php?id=" . $producto->id?>"><img src="../images/delete.png" alt=""> </a></td>
 				</tr>
 				<?php } ?>
 			</tbody>
 		</table>
 	</div>
-<?php include_once "pie.php" ?>
+		</div>
+	</div>
+<?php include_once "./footer.php" ?>
