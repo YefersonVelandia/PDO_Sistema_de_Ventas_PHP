@@ -20,7 +20,7 @@
 			if($rol == 1){
 				$_SESSION['nombre_usuario'] = $usuario;
 				$_SESSION['id_fk'] = $rol;
-				header("location: home.php");
+				header("location: ./admin/index.php");
 			}else if($rol == 2){
 
 				$_SESSION['nombre_usuario'] = $usuario;
