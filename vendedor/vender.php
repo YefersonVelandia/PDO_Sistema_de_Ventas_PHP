@@ -8,12 +8,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-			<h1>Vender</h1>
+			<h1>
+				Vendedor
+			</h1>
+			
 			<?php
 				if(isset($_GET["status"])){
 					if($_GET["status"] === "1"){
 						?>
-							<div class="alert alert-success">
+							<div style="background-color: #00FE49;" class="alert alert-success">
 								<strong>¡Correcto!</strong> Venta realizada correctamente
 							</div>
 						<?php
@@ -25,7 +28,7 @@
 						<?php
 					}else if($_GET["status"] === "3"){
 						?>
-						<div class="alert alert-info">
+						<div style="background-color: 105652; color: #00FE49;" class="alert alert-info">
 								<strong>Ok</strong> Producto quitado de la lista
 							</div>
 						<?php
@@ -56,8 +59,8 @@
 				<input autocomplete="off" autofocus class="form-control" name="codigo" required type="text" id="codigo" placeholder="Escribe el código">
 			</form>
 			<br><br>
-			<table class="table table-bordered">
-				<thead>
+			<table class="table table-responsive table-hover border-dark table-bordered table">
+				<thead class="table  border-dark" style="background-color: #88E0EF;">
 					<tr>
 						<th>ID</th>
 						<th>Código</th>

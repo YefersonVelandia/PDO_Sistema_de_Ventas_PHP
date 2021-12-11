@@ -1,0 +1,26 @@
+.header .navbar {
+    background-color: #064635;
+}
+
+
+body{
+    background-color: #FAEDF0;
+}
+
+.micard{
+	/*
+  box-shadow:1px 7px 15px #a2a2a2;
+  margin:-25px -25px 0px -25px;
+  height: 300px;
+  */
+  
+	background: linear-gradient(70deg,#00FE22,#F6FF70);
+    box-shadow:5px 8px 15px #a2a2a2;
+    margin-top: 20px;
+}
+
+
+.centrado{
+    margin:10px auto;
+    display:block;
+}

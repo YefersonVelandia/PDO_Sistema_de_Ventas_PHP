@@ -19,32 +19,31 @@
 <div class="container" > 
   <div class="col-7 mx-auto">
  
-	<div class="card mb-3" style="max-width: 500px;">
+	<div class="micard card mb-3" style="max-width: 500px;">
 		<div class="row g-0">
 			<div class="col-md-4">
-			<img src="../images/consultar.jpg" class="img-fluid rounded-start" alt="...">
+			<img  src="../images/consultar.jpg" class="img-fluid rounded-start" alt="...">
 			</div>
 			<div class="col-md-8">
 			<div class="card-body">
 				<h5 class="card-title">consultar inventario</h5>
 				<p class="card-text">Listado de produtos que se encuntran en el inventario</p>
-				<a href="./mostrar.php" class="btn btn-success">Mostrar</a>
+				<a href="./listar.php" class="btn btn-light">Mostrar</a>
 			</div>
 			</div>
 		</div>
 	</div>
 
-    <div class="card mb-3" style="max-width: 500px;">
+    <div class="micard card mb-3" style="max-width: 500px;">
 		<div class="row g-0">
 			<div class="col-md-4">
-				<img src="../images/buy.png" class="img-fluid rounded-start" alt="...">
+				<img class="centrado" src="../images/buy.png" class="img-fluid rounded-start" alt="...">
 			</div>
 			<div class="col-md-8">
 				<div class="card-body">
 					<h5 class="card-title">Generar una venta</h5>
-					<p class="card-text"> Se listan los productos disponibles					</p>
-					<p> Se genera un recibo de venta</p>
-					<a href="./venta.php" class="btn btn-success">Generar</a>
+					<p class="card-text"> Opcion de venta de productos</p>
+					<a href="./vender.php" class="btn btn-light">Generar</a>
 				</div>
 			</div>
 			</div>

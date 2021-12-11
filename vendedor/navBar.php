@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<nav style="background-color: CE1212;" class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="./index.php">Pi Interactiva</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,10 +26,9 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Ver perfil</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="../logout.php">Cerrar Sesión</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -42,6 +39,3 @@
     </div>
   </div>
 </nav>
-	
-</body>
-</html>
