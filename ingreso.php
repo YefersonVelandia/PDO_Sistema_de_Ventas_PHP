@@ -9,8 +9,8 @@
 	if(isset($_POST['btn_ingresar'])){
 
 
-		$sentencia = $con->prepare("select * from usuario ");
-		$sentencia->execute();		
+		$sentencia = $con->prepare("select * from usuario where correo = ? ");
+		$sentencia->execute([$usuario]);		
 		$usu = $sentencia->fetch(PDO::FETCH_ASSOC);
 		
 		if( ($usu['correo']) && (password_verify($clave, $usu['clave'] )) ){
