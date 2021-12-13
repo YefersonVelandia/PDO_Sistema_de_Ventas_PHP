@@ -1,6 +1,6 @@
 <?php
 	include_once "../conexion.php";
-	$sentencia = $con->query("SELECT ventas.total, ventas.fecha, ventas.id, GROUP_CONCAT(	productos.codigo, '..',  productos.descripcion, '..', productos_vendidos.cantidad SEPARATOR '__') AS productos FROM ventas INNER JOIN productos_vendidos ON productos_vendidos.id_venta = ventas.id INNER JOIN productos ON productos.id = productos_vendidos.id_producto GROUP BY ventas.id ORDER BY ventas.id;");
+	$sentencia = $con->query("SELECT ventas.total, ventas.fecha, ventas.id, GROUP_CONCAT(	productos.codigo, '..',  productos.descripcion, '..', productos_vendidos.cantidad SEPARATOR '__') AS productos FROM ventas INNER JOIN productos_vendidos ON productos_vendidos.id_venta = ventas.id INNER JOIN productos ON productos.id = productos_vendidos.id_producto GROUP BY ventas.id ORDER BY ventas.fecha ASC;");
 
 	$ventas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
@@ -25,7 +25,6 @@
 						<th>Fecha</th>
 						<th>Productos vendidos</th>
 						<th>Total</th>
-						<th>Eliminar</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -56,7 +55,6 @@
 							</table>
 						</td>
 						<td><?php echo $venta->total ?></td>
-						<td><a class="btn btn-danger" href="<?php echo "eliminarVenta.php?id=" . $venta->id?>"><i class="fa fa-trash"></i></a></td>
 					</tr>
 					<?php } ?>
 				</tbody>
