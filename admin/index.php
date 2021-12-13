@@ -17,7 +17,7 @@
 			<div class="card-body">
 				<h5 class="card-title">consultar inventario</h5>
 				<p class="card-text">Listado de produtos que se encuntran registrados</p>
-				<a href="/admin/inventario.php" class="btn btn-success">Mostrar</a>
+				<a href="/admin/inventario.php" class="btn btn-light">Mostrar</a>
 			</div>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 				<div class="card-body">
 					<h5 class="card-title">Ingresar Producto</h5>
 					<p class="card-text">Registrar un producto</p>
-					<a href="/acciones/ingresarProducto.php" class="btn btn-success">Registrar</a>
+					<a href="/acciones/ingresarProducto.php" class="btn btn-light">Registrar</a>
 				</div>
 			</div>
 			</div>
@@ -56,7 +56,7 @@
 				<div class="card-body">
 					<h5 class="card-title">Ingresar Productos con archivo Excel</h5>
 					<p class="card-text">Registrar varios productos</p>
-					<a href="/acciones/ingresoExcel.php" class="btn btn-success">Ingresar</a>
+					<a href="/acciones/ingresoExcel.php" class="btn btn-light">Ingresar</a>
 				</div>
 				</div>
 			</div>
