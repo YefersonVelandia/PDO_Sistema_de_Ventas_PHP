@@ -15,11 +15,26 @@ body{
     margin-top: 20px;
 }
 
-.cardAdmin{
+.cardAdmin {
     box-shadow:5px 8px 15px #a2a2a2;
-    background: linear-gradient(70deg, #00B9FE,#70FAFF);
-    margin-top: 20px;
+    /* background: linear-gradient(70deg, #00B9FE,#70FAFF); */
+    margin-top: 50px;
     border-radius: 10px;
+    min-height: 250px;
+    max-width: 350px;
+    padding: 10px;
+}
+
+.cardAdmin .card-body{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.miboton{
+    
+    min-width: 240px;
 }
 
 
@@ -35,5 +50,15 @@ body{
     height: 450px;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.mialert{
+    background-color: #6CF3D9;
+    box-shadow:5px 8px 15px #a2a2a2;
+    height: 100px;
+    max-width: 600px;
+    margin-top: 0 auto;
+    margin-top: 60px;
+    padding: 20px;
 }
 

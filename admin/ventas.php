@@ -7,16 +7,14 @@
 
 <?php 
 	include_once "./header.php";
-	include_once './navBar.php';
+	include_once './adminNavbar.php';
 ?>
 
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
 			<h1>Ventas</h1>
-			<div>
-				<a class="btn btn-success" href="./vender.php">Nueva <i class="fa fa-plus"></i></a>
-			</div>
+			
 			<br>
 			<table class="table table-bordered">
 				<thead>

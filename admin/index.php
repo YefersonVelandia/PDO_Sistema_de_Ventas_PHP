@@ -6,63 +6,76 @@
 <?php include_once './header.php' ?>
 <body >
 
-<div class="container" > 
-  <div class="col-7 mx-auto">
-	<div class="cardAdmin card mb-3" style="max-width: 500px;">
-		<div class="row g-0">
-			<div class="col-md-4">
-			<!-- <img src="" class="img-fluid rounded-start" alt="..."> -->
-			</div>
-			<div class="col-md-8">
-			<div class="card-body">
-				<h5 class="card-title">consultar inventario</h5>
-				<p class="card-text">Listado de produtos que se encuntran registrados</p>
-				<a href="/admin/inventario.php" class="btn btn-light">Mostrar</a>
-			</div>
-			</div>
-		</div>
-	</div>
- </div>	
-</div>	
+<div class="container">
+    <div class="row">
+        
+	<div class="col-lg-4 col-md-12 mb-4">            
+            <div class="cardAdmin card" style="width: 19rem;">
+                <div class="card-header-second">
+                    <div class="card-body">
+						<div>
+							<h5 class="card-title" style="color: #292929">Consultar inventario</h5>
+							<p class="card-text">Listado de producto</p>
 
-<div class="container "> 
-  <div class="col-7 mx-auto">
-	<div class="cardAdmin card mb-3" style="max-width: 500px;">
-		<div class="row g-0">
-			<div class="col-md-4">
-				<!-- <img src="" class="img-fluid rounded-start" alt="..."> -->
-			</div>
-			<div class="col-md-8">
-				<div class="card-body">
-					<h5 class="card-title">Ingresar Producto</h5>
-					<p class="card-text">Registrar un producto</p>
-					<a href="./ingresarProducto.php" class="btn btn-light">Registrar</a>
-				</div>
-			</div>
-			</div>
-	</div>
-  </div>
-</div>	
+						</div>
+                        <a href="./inventario.php" class="miboton btn btn-dark ">Mostrar</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
 
-<div class="container "> 
-	<div class=" col-7 mx-auto">
+        <!-- Tarjeta #3 -->
+        <div class="col-lg-4 col-md-12 mb-4">            
+            <div class="cardAdmin card" style="width: 19rem;">
+                <div class="card-header-second">
+                    <div class="card-body">
+						<div>
+							<h5 class="card-title" style="color: #292929">Ingresar Productos con archivo Excel(CVS)</h5>
+							<p class="card-text">Registrar varios productos</p>
 
-		<div class="cardAdmin card mb-3" style="max-width: 500px;">
-			<div class="row g-0">
-				<div class="col-md-4">
-				<!-- <img src="" class="img-fluid rounded float-start" alt="..."> -->
-				</div>
-				<div class="col-md-8">
-				<div class="card-body">
-					<h5 class="card-title">Ingresar Productos con archivo Excel</h5>
-					<p class="card-text">Registrar varios productos</p>
-					<a href="./ingresoExcel.php" class="btn btn-light">Ingresar</a>
-				</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>		
+						</div>
+                        <a href="./ingresoExcel.php" class="miboton btn btn-dark ">Mostrar</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4">            
+            <div class="cardAdmin card" style="width: 19rem;">
+                <div class="card-header-second">
+                    <div class="card-body">
+						<div>
+							<h5 class="card-title" style="color: #292929">Ingresar Productos </h5>
+							<p class="card-text">Registrar un producto</p>
+
+						</div>
+                        <a href="./ingresoExcel.php" class="miboton btn btn-dark ">Mostrar</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class="col-lg-4 col-md-12 mb-4">            
+            <div class="cardAdmin card" style="width: 19rem;">
+                <div class="card-header-second">
+                    <div class="card-body">
+						<div>
+							<h5 class="card-title" style="color: #292929">Consultar ventas </h5>
+							<p class="card-text">Ventas registradas</p>
+
+						</div>
+                        <a href="./ventas.php" class="miboton btn btn-dark ">Mostrar</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+
+    </div>
+</div>
+
+
+
 
 	<?php  include_once './footer.php' ?>
 	    

@@ -16,7 +16,7 @@
 				if(isset($_GET["status"])){
 					if($_GET["status"] === "1"){
 						?>
-							<div style="background-color: #00FE49;" class="alert alert-success">
+							<div  class="alert alert-success">
 								<strong>¡Correcto!</strong> Venta realizada correctamente
 							</div>
 						<?php
@@ -60,7 +60,7 @@
 			</form>
 			<br><br>
 			<table class="table table-responsive table-hover border-dark table-bordered table">
-				<thead class="table  border-dark" style="background-color: #88E0EF;">
+				<thead class="table  table-dark border-dark" >
 					<tr>
 						<th>ID</th>
 						<th>Código</th>

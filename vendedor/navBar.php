@@ -1,6 +1,6 @@
 
 
-<nav style="background-color: CE1212;" class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav  style="background-color: #0B5345;" class="navbar navbar-expand-lg navbar-dark ">
   <div class="container">
     <a class="navbar-brand" href="./index.php">Pi Interactiva</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
