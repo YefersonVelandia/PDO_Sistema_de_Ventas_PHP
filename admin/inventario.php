@@ -18,7 +18,7 @@
             <div class="col-lg-12">
             <h1>Productos</h1>
             <div>
-                <a class="btn btn-success" href="./formulario.php">Nuevo <i class="fa fa-plus"></i></a>
+                <a class="btn btn-success" href="./ingresarProducto.php">Nuevo <i class="fa fa-plus"></i></a>
             </div>
             <br>
             <table class="table table-bordered">
