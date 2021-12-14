@@ -14,7 +14,9 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<h1>Ventas</h1>
-			
+			<div>
+				<a class="btn btn-success" target="_blank"href="./reporte.php">Imprimir reporte </a>
+			</div>
 			<br>
 			<table class="table table-bordered">
 				<thead>
