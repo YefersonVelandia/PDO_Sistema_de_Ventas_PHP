@@ -6,7 +6,7 @@
 	$total = $_POST["total"];
 	include_once "../conexion.php";
 
-
+	date_default_timezone_set('America/Bogota');
 	$ahora = date("Y-m-d H:i:s");
 	$sentencia = $con->prepare("INSERT INTO ventas(fecha, total) VALUES (?, ?);");
 	$sentencia->execute([$ahora, $total]);
