@@ -1,10 +1,54 @@
 <?php
 	if(!isset($_POST["total"])) exit;
 
+	//select pr.descripcion, p.cantidad,v.fecha, v.total  from ventas v inner join productos_vendidos p on v.id = p.id_venta 
+//inner join productos pr on v.id=pr.id;
 	session_start();
 
 	$total = $_POST["total"];
-	include_once "../conexion.php";
+	include_once "../conexion.php"; 
+	require('../libreria/fpdf.php');
+	class PDF extends FPDF
+    {
+        // Cabecera de página
+        function Header()
+        {
+            // Arial bold 15
+            $this->SetFont('Arial','B',12);
+            // Movernos a la derecha
+            $this->Cell(80);
+            // Título
+            $this->Cell(30,10,'Reporte de ventas',0,0,'C');
+            // Salto de línea
+            $this->Ln(20);
+
+            $this->Cell(10,10, 'Total', 1, 0, 'C', 0);
+            $this->Cell(40,10, 'producto' , 1, 0, 'C', 0);
+            $this->Cell(30,10, 'cantidad', 1, 0, 'C', 0);
+            $this->Cell(110,10,'fecha', 1, 1, 'C', 0);
+        }
+
+        // Pie de página
+        function Footer()
+        {
+            // Posición: a 1,5 cm del final
+            $this->SetY(-15);
+            // Arial italic 8
+            $this->SetFont('Arial','I',8);
+            // Número de página
+            $this->Cell(0,10,utf8_decode('Página').$this->PageNo().'/{nb}',0,0,'C');
+        }
+    }
+
+	// Creación del objeto de la clase heredada
+    $pdf = new PDF('P','mm','A4');
+    $pdf->AliasNbPages();
+    $pdf->AddPage();
+    $pdf->SetFont('Times','',12);
+	$pdf->Cell(10,10, $total, 1, 0, 'c', 0);
+    $pdf->Output();
+
+	
 
 	date_default_timezone_set('America/Bogota');
 	$ahora = date("Y-m-d H:i:s");
@@ -28,5 +72,11 @@
 	$con->commit();
 	unset($_SESSION["carrito"]);
 	$_SESSION["carrito"] = [];
+
+	
+        
+
+            
+
 	header("Location: ./vender.php?status=1");
 ?>

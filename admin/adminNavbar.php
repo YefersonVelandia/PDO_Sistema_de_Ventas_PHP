@@ -18,6 +18,10 @@
         <li class="nav-item">
           <a class="nav-link" href="./ingresoExcel.php">Ingresar Excel</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./ventas.php">Consultar ventas</a>
+        </li>
         
         
 

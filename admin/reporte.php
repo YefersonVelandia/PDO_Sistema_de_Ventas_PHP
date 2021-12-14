@@ -11,7 +11,7 @@
         function Header()
         {
             // Arial bold 15
-            $this->SetFont('Arial','B',15);
+            $this->SetFont('Arial','B',12);
             // Movernos a la derecha
             $this->Cell(80);
             // Título
@@ -47,7 +47,7 @@
     $resultado = mysqli_query($con, $sql);
 
     // Creación del objeto de la clase heredada
-    $pdf = new PDF();
+    $pdf = new PDF('P','mm','A4');
     $pdf->AliasNbPages();
     $pdf->AddPage();
     $pdf->SetFont('Times','',12);

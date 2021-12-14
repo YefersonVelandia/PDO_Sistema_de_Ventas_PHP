@@ -7,6 +7,11 @@ body{
     background-color: #ffffff;
 }
 
+.centrar{
+    display: flex;
+    justify-content: center;
+  }
+
 .micard{
 	
   

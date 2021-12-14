@@ -12,44 +12,45 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>vendedor</h1>
+	
+	
+	<div class="container">
+		<h1>vendedor</h1>
+		<div class="row">
+			
+			<div class="col-lg-4 col-md-12 mb-4">            
+				<div class="cardAdmin card" style="width: 19rem;">
+					<div class="card-header-second">
+						<div class="card-body">
+							<div>
+								<h5 class="card-title" style="color: #292929">Consultar inventario</h5>
+								<p class="card-text">Listado de producto</p>
 
-    
+							</div>
+							<a href="./inventario.php" class="miboton btn btn-dark ">Mostrar</a>
+						</div>
+					</div>
+				</div>    
+			</div>
 
-<div class="container" > 
-  <div class="col-7 mx-auto">
- 
-	<div class="micard card mb-3" style="max-width: 500px;">
-		<div class="row g-0">
-			<div class="col-md-4">
-			<img  src="../images/consultar.jpg" class="img-fluid rounded-start" alt="...">
-			</div>
-			<div class="col-md-8">
-			<div class="card-body">
-				<h5 class="card-title">consultar inventario</h5>
-				<p class="card-text">Listado de produtos que se encuntran en el inventario</p>
-				<a href="./listar.php" class="btn btn-light">Mostrar</a>
-			</div>
+			<!-- Tarjeta #3 -->
+			<div class="col-lg-4 col-md-12 mb-4">            
+				<div class="cardAdmin card" style="width: 19rem;">
+					<div class="card-header-second">
+						<div class="card-body">
+							<div>
+								<h5 class="card-title" style="color: #292929">Generar ventas</h5>
+								<p class="card-text">Opcion de venta de productos</p>
+
+							</div>
+							<a href="./vender.php" class="miboton btn btn-dark ">Mostrar</a>
+						</div>
+					</div>
+				</div>    
 			</div>
 		</div>
-	</div>
+</div>
 
-    <div class="micard card mb-3" style="max-width: 500px;">
-		<div class="row g-0">
-			<div class="col-md-4">
-				<img class="centrado" src="../images/buy.png" class="img-fluid rounded-start" alt="...">
-			</div>
-			<div class="col-md-8">
-				<div class="card-body">
-					<h5 class="card-title">Generar una venta</h5>
-					<p class="card-text"> Opcion de venta de productos</p>
-					<a href="./vender.php" class="btn btn-light">Generar</a>
-				</div>
-			</div>
-			</div>
-	</div>
- </div>	
-</div>	
 
 <?php include_once './footer.php' ?>
 </body>

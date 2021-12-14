@@ -62,7 +62,6 @@
 			<table class="table table-responsive table-hover border-dark table-bordered table">
 				<thead class="table  table-dark border-dark" >
 					<tr>
-						<th>ID</th>
 						<th>Código</th>
 						<th>Descripción</th>
 						<th>Precio de venta</th>
@@ -76,7 +75,6 @@
 							$granTotal += $producto->total;
 						?>
 					<tr>
-						<td><?php echo $producto->id ?></td>
 						<td><?php echo $producto->codigo ?></td>
 						<td><?php echo $producto->descripcion ?></td>
 						<td><?php echo $producto->precioVenta ?></td>
@@ -89,7 +87,7 @@
 			</table>
 
 			<h3>Total: <?php echo $granTotal; ?></h3>
-			<form action="./terminarVenta.php" method="POST">
+			<form target="_blank" action="./terminarVenta.php" method="POST">
 				<input name="total" type="hidden" value="<?php echo $granTotal;?>">
 				<button type="submit" class="btn btn-success">Terminar venta</button>
 				<a href="./cancelarVenta.php" class="btn btn-danger">Cancelar venta</a>
