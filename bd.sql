@@ -1,6 +1,27 @@
-DROP DATABASE IF EXISTS ventas;
+-- DROP DATABASE IF EXISTS ventas;
+
+
 CREATE DATABASE IF NOT EXISTS ventas;
 USE ventas;
+
+CREATE TABLE tipo_usuario(
+    id int,
+    tipo varchar(20),
+    PRIMARY KEY(id)
+);
+INSERT INTO tipo_usuario VALUES (1, 'root');
+INSERT INTO tipo_usuario VALUES (2, 'usuario');
+
+CREATE TABLE usuario(
+    id int not null AUTO_INCREMENT,
+	nombre varchar(100) not null,
+	correo varchar(180) not null,
+	p2 varchar(250) not null,
+	id_fk int not null,
+	PRIMARY KEY(id),
+	FOREIGN KEY(id_fk) REFERENCES tipo_usuario(id)
+);
+
 CREATE TABLE productos(
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	codigo VARCHAR(255) NOT NULL,

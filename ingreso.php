@@ -13,7 +13,7 @@
 		$sentencia->execute([$usuario]);		
 		$usu = $sentencia->fetch(PDO::FETCH_ASSOC);
 		
-		if( ($usu['correo']) && (password_verify($clave, $usu['clave'] )) ){
+		if( ($usu['correo']) && (password_verify($clave, $usu['p2'] )) ){
 			
 			$rol = $usu['id_fk'];
 

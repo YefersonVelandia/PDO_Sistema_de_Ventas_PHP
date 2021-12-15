@@ -26,9 +26,5 @@
 			}else{
 				echo "Los datos no se registraron";
 			}
-
-			
-		
-		
 	}
 ?>
