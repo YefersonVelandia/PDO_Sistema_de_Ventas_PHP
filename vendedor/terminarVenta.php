@@ -1,13 +1,12 @@
 <?php
 	if(!isset($_POST["total"])) exit;
 
-	//select pr.descripcion, p.cantidad,v.fecha, v.total  from ventas v inner join productos_vendidos p on v.id = p.id_venta 
-//inner join productos pr on v.id=pr.id;
 	session_start();
 
 	$total = $_POST["total"];
 	include_once "../conexion.php"; 
 	require('../libreria/fpdf.php');
+
 	class PDF extends FPDF
     {
         // Cabecera de página
@@ -41,7 +40,7 @@
     }
 
 	// Creación del objeto de la clase heredada
-    $pdf = new PDF('P','mm','A4');
+    $pdf = new FPDF('P', 'cm', array(10 ,10));
     $pdf->AliasNbPages();
     $pdf->AddPage();
     $pdf->SetFont('Times','',12);
@@ -78,5 +77,5 @@
 
             
 
-	header("Location: ./vender.php?status=1");
+	//header("Location: ./vender.php?status=1");
 ?>

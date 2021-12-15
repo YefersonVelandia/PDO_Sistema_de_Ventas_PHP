@@ -56,3 +56,12 @@ VALUES
 (3, '3', 'Aceite', 20000, 18000, 100),
 (4, '4', 'Palomitas de maíz', 15000, 12000, 100),
 (5, '5', 'Doritos', 8000, 5000, 100);
+
+
+select pr.descripcion, p.cantidad,v.fecha, v.total  from ventas v
+ inner join productos_vendidos p on v.id = p.id_venta 
+inner join productos pr on v.id=pr.id;
+
+select v.fecha, p.descripcion, pv.cantidad
+from ventas v inner join productos p  on v.id = p.id
+inner join productos_vendidos pv on v.id = pv.id_venta;
