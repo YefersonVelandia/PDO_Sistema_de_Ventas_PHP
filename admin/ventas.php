@@ -1,6 +1,6 @@
 <?php
 	include_once "../conexion.php";
-	$sentencia = $con->query("SELECT ventas.total, ventas.fecha, ventas.id, GROUP_CONCAT(	productos.codigo, '..',  productos.descripcion, '..', productos_vendidos.cantidad SEPARATOR '__') AS productos FROM ventas INNER JOIN productos_vendidos ON productos_vendidos.id_venta = ventas.id INNER JOIN productos ON productos.id = productos_vendidos.id_producto GROUP BY ventas.id ORDER BY ventas.fecha DESC;");
+	$sentencia = $con->query("SELECT ventas.total, ventas.fecha, ventas.id, GROUP_CONCAT(	productos2.codigo, '..',  productos2.descripcion, '..', productos_vendidos2.cantidad SEPARATOR '__') AS productos FROM ventas INNER JOIN productos_vendidos2 ON productos_vendidos2.id_venta = ventas.id INNER JOIN productos2 ON productos2.id = productos_vendidos2.id_producto GROUP BY ventas.id ORDER BY ventas.fecha DESC;");
 
 	$ventas = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
