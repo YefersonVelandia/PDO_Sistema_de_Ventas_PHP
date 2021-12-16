@@ -3,7 +3,7 @@
 <?php
     require('../libreria/fpdf.php');
 
-    $sql = "SELECT ventas.total, ventas.fecha, ventas.id, GROUP_CONCAT(	productos.codigo, '..',  productos.descripcion, '..', productos_vendidos.cantidad SEPARATOR '__') AS productos FROM ventas INNER JOIN productos_vendidos ON productos_vendidos.id_venta = ventas.id INNER JOIN productos ON productos.id = productos_vendidos.id_producto GROUP BY ventas.id ORDER BY ventas.fecha DESC";
+    $sql = "SELECT ventas.total, ventas.fecha, ventas.id, GROUP_CONCAT(	productos2.codigo, '..',  productos2.descripcion, '..', productos_vendidos2.cantidad SEPARATOR '__') AS productos2 FROM ventas INNER JOIN productos_vendidos2 ON productos_vendidos2.id_venta = ventas.id INNER JOIN productos2 ON productos2.id = productos_vendidos2.id_producto GROUP BY ventas.id ORDER BY ventas.fecha DESC";
 
     class PDF extends FPDF
     {
@@ -56,7 +56,7 @@
             $pdf->Cell(10,10, $row['id'], 1, 0, 'c', 0);
             $pdf->Cell(40,10, $row['fecha'], 1, 0, 'C', 0);
             $pdf->Cell(30,10, $row['total'], 1, 0, 'C', 0);
-            $pdf->Cell(110,10, $row['productos'], 1, 1, 'l', 0);
+            $pdf->Cell(110,10, $row['productos2'], 1, 1, 'l', 0);
         }
     $pdf->Output();
 
