@@ -32,7 +32,7 @@
         $cal = (($compra*$miiva)/100);
         $precioVenta = $compra + $cal;
         
-        $duplicidad = ("SELECT codigo FROM productos WHERE codigo='$codigo' ");
+        $duplicidad = ("SELECT codigo FROM productos2 WHERE codigo='$codigo' ");
         $ca_dupli = mysqli_query($con, $duplicidad);
         $cant_duplicidad = mysqli_num_rows($ca_dupli);
        
