@@ -13,11 +13,8 @@
     $consulta = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($consulta);
 
-    $v = "select v.fecha, v.total ,pr.cantidad, p.descripcion, p.precioventa from  
-    productos_vendidos2 pr inner join productos2 p 
-    on pr.id_producto = p.codigo
-    inner join ventas v on pr.id_venta = v.id
-     where id_venta=$row[0]";
+    $v = "select v.fecha, v.total, pr.descripcion ,pr.precioVenta, p.cantidad from ventas v inner join productos_vendidos2 p on v.id = p.id_venta
+    inner join productos2 pr on pr.id = p.id_producto where v.id=$row[0]";
     $v2 =  mysqli_query($con, $v);
     $data = $v2->fetch_assoc();
     

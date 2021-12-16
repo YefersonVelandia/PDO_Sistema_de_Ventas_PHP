@@ -22,15 +22,15 @@ CREATE TABLE usuario(
 	FOREIGN KEY(id_fk) REFERENCES tipo_usuario(id)
 );
 
-CREATE TABLE productos(
-	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-	codigo VARCHAR(255) NOT NULL,
-	descripcion VARCHAR(255) NOT NULL,
-	precioVenta int NOT NULL,
-	precioCompra int NOT NULL,
-	existencia int NOT NULL,
-	PRIMARY KEY(id)
-) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+-- CREATE TABLE productos(
+-- 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+-- 	codigo VARCHAR(255) NOT NULL,
+-- 	descripcion VARCHAR(255) NOT NULL,
+-- 	precioVenta int NOT NULL,
+-- 	precioCompra int NOT NULL,
+-- 	existencia int NOT NULL,
+-- 	PRIMARY KEY(id)
+-- ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 
 CREATE TABLE productos2(
@@ -52,13 +52,23 @@ CREATE TABLE ventas(
 	PRIMARY KEY(id)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE productos_vendidos(
+-- CREATE TABLE productos_vendidos(
+-- 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+-- 	id_producto BIGINT UNSIGNED NOT NULL,
+-- 	cantidad BIGINT UNSIGNED NOT NULL,
+-- 	id_venta BIGINT UNSIGNED NOT NULL,
+-- 	PRIMARY KEY(id),
+-- 	FOREIGN KEY(id_producto) REFERENCES productos(id) ON DELETE CASCADE,
+-- 	FOREIGN KEY(id_venta) REFERENCES ventas(id) ON DELETE CASCADE
+-- ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE productos_vendidos2(
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	id_producto BIGINT UNSIGNED NOT NULL,
 	cantidad BIGINT UNSIGNED NOT NULL,
 	id_venta BIGINT UNSIGNED NOT NULL,
 	PRIMARY KEY(id),
-	FOREIGN KEY(id_producto) REFERENCES productos(id) ON DELETE CASCADE,
+	FOREIGN KEY(id_producto) REFERENCES productos2(id) ON DELETE CASCADE,
 	FOREIGN KEY(id_venta) REFERENCES ventas(id) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
@@ -78,3 +88,12 @@ inner join productos pr on v.id=pr.id;
 select v.fecha, p.descripcion, pv.cantidad
 from ventas v inner join productos p  on v.id = p.id
 inner join productos_vendidos pv on v.id = pv.id_venta;
+
+
+select *
+from ventas v inner join productos_vendidos2 p on v.id = p.id_venta 
+inner join productos2 pr on v.id=pr.id where p.id_venta=20;
+
+select *
+from productos2 p inner join productos_vendidos2 pv on p.id = pv.id
+inner join ventas v on v.id= p.id;
