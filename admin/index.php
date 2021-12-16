@@ -49,7 +49,7 @@
 							<p class="card-text">Registrar un producto</p>
 
 						</div>
-                        <a href="./ingresoExcel.php" class="miboton btn btn-dark ">Mostrar</a>
+                        <a href="./ingresarProducto.php" class="miboton btn btn-dark ">Mostrar</a>
                     </div>
                 </div>
             </div>    
