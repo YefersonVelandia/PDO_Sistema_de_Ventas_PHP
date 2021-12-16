@@ -30,7 +30,7 @@
         $compra = intval($compra);
 
         $cal = (($compra*$miiva)/100);
-        $precioVenta = $precioCompra + $cal;
+        $precioVenta = $compra + $cal;
         
         $duplicidad = ("SELECT codigo FROM productos WHERE codigo='$codigo' ");
         $ca_dupli = mysqli_query($con, $duplicidad);
