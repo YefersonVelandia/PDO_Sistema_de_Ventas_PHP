@@ -32,6 +32,19 @@ CREATE TABLE productos(
 	PRIMARY KEY(id)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
+
+CREATE TABLE productos2(
+	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	codigo VARCHAR(255) NOT NULL,
+	descripcion VARCHAR(255) NOT NULL,
+	iva int NOT NULL,
+	precioVenta int NOT NULL,
+	precioCompra int NOT NULL,
+	existencia int NOT NULL,
+	ubicacion varchar(150) NOT NULL,
+	PRIMARY KEY(id)
+) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
 CREATE TABLE ventas(
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	fecha DATETIME NOT NULL,
