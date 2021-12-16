@@ -1,7 +1,7 @@
 <?php
 
     require_once '../libreria/fpdf.php';
-    $sql = "select max(id_venta) from productos_vendidos";
+    $sql = "select max(id_venta) from productos_vendidos2";
 
     try {
         $con = new mysqli("localhost","root","condor68","ventas");
@@ -14,7 +14,7 @@
     $row = mysqli_fetch_array($consulta);
 
     $v = "select v.fecha, v.total ,pr.cantidad, p.descripcion, p.precioventa from  
-    productos_vendidos pr inner join productos p 
+    productos_vendidos2 pr inner join productos2 p 
     on pr.id_producto = p.codigo
     inner join ventas v on pr.id_venta = v.id
      where id_venta=$row[0]";
