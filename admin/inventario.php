@@ -34,6 +34,7 @@
                         <th>Ubicación</th>
                         <th>Editar</th>
                         <th>Eliminar</th>
+                        <th>PMP</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,8 +47,9 @@
                         <td><?php echo $producto->precioVenta ?></td>
                         <td><?php echo $producto->existencia ?></td>
                         <td><?php echo $producto->ubicacion ?></td>
-                        <td><a class="btn btn-outline-warning" href="<?php echo "editar.php?id=" . $producto->id?>"><img src="../images/edit.png" alt=""></a></td>
-                        <td><a class="btn btn-outline-danger" href="<?php echo "eliminar.php?id=" . $producto->id?>"><img src="../images/bin.png" alt=""></a></td>
+                        <td><a class="btn btn-warning" href="<?php echo "editar.php?id=" . $producto->id?>"><img src="../images/edit.png" alt=""></a></td>
+                        <td><a class="btn btn-danger" href="<?php echo "eliminar.php?id=" . $producto->id?>"><img src="../images/bin.png" alt=""></a></td>
+                        <td><a class="btn btn-success" href="" alt=""> <img src="../images/add2.png" alt=""> </a></td>
                     </tr>
                     <?php } ?>
                 </tbody>
