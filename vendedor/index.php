@@ -27,7 +27,7 @@
 								<p class="card-text">Listado de producto</p>
 
 							</div>
-							<a href="./inventario.php" class="miboton btn btn-dark ">Mostrar</a>
+							<a href="./listar.php" class="miboton btn btn-dark ">Mostrar</a>
 						</div>
 					</div>
 				</div>    
@@ -44,6 +44,21 @@
 
 							</div>
 							<a href="./vender.php" class="miboton btn btn-dark ">Mostrar</a>
+						</div>
+					</div>
+				</div>    
+			</div>
+			
+			<div class="col-lg-4 col-md-12 mb-4">            
+				<div class="cardAdmin card" style="width: 19rem;">
+					<div class="card-header-second">
+						<div class="card-body">
+							<div>
+								<h5 class="card-title" style="color: #292929">Consultar inventario</h5>
+								<p class="card-text">Listado de producto</p>
+								
+							</div>
+							<a href="./listar.php" class="miboton btn btn-dark ">Mostrar</a>
 						</div>
 					</div>
 				</div>    

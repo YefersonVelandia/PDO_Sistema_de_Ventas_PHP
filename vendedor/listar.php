@@ -1,7 +1,7 @@
 
 <?php
 	include_once "../conexion.php";
-	$sentencia = $con->query("SELECT * FROM productos;");
+	$sentencia = $con->query("SELECT * FROM productos2;");
 	$productos = $sentencia->fetchAll(PDO::FETCH_OBJ);
 ?>
 
@@ -22,8 +22,10 @@
 							
 							<th>Código</th>
 							<th>Descripción</th>
+							<th>IVA</th>
 							<th>Precio de venta</th>
 							<th>Existencia</th>
+							<th>Ubicación</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -31,8 +33,10 @@
 						<tr>
 							<td><?php echo $producto->codigo ?></td>
 							<td><?php echo $producto->descripcion ?></td>
+							<td><?php echo $producto->iva ?>%</td>
 							<td><?php echo $producto->precioVenta ?></td>
 							<td><?php echo $producto->existencia ?></td>
+							<td><?php echo $producto->ubicacion ?></td>
 						</tr>
 						<?php } ?>
 					</tbody>
