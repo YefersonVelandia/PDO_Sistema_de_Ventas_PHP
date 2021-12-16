@@ -12,6 +12,7 @@
 				Vendedor
 			</h1>
 			
+			
 			<?php
 				if(isset($_GET["status"])){
 					if($_GET["status"] === "1"){
@@ -28,7 +29,7 @@
 						<?php
 					}else if($_GET["status"] === "3"){
 						?>
-						<div style="background-color: 105652; color: #00FE49;" class="alert alert-info">
+						<div class="alert alert-info">
 								<strong>Ok</strong> Producto quitado de la lista
 							</div>
 						<?php
@@ -87,10 +88,11 @@
 			</table>
 
 			<h3>Total: <?php echo $granTotal; ?></h3>
-			<form target="_blank" action="./terminarVenta.php" method="POST">
+			<form  action="./terminarVenta.php" method="POST">
 				<input name="total" type="hidden" value="<?php echo $granTotal;?>">
 				<button type="submit" class="btn btn-success">Terminar venta</button>
 				<a href="./cancelarVenta.php" class="btn btn-danger">Cancelar venta</a>
+				<a class="btn btn-primary" target="_blank" href="./pruebas.php">Imprimir</a>
 			</form>
 		</div>
 		</div>

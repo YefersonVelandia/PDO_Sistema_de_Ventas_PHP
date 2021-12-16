@@ -5,49 +5,39 @@
 
 	$total = $_POST["total"];
 	include_once "../conexion.php"; 
-	require('../libreria/fpdf.php');
+	// require('../libreria/fpdf.php');
 
-	class PDF extends FPDF
-    {
-        // Cabecera de página
-        function Header()
-        {
-            // Arial bold 15
-            $this->SetFont('Arial','B',12);
-            // Movernos a la derecha
-            $this->Cell(80);
-            // Título
-            $this->Cell(30,10,'Reporte de ventas',0,0,'C');
-            // Salto de línea
-            $this->Ln(20);
+	// class PDF extends FPDF
+    // {
+    //     // Cabecera de página
+    //     function Header()
+    //     {
+    //         // Arial bold 15
+    //         $this->SetFont('Arial','B',12);
+    //         // Movernos a la derecha
+    //         $this->Cell(80);
+    //         // Título
+    //         $this->Cell(30,10,'Reporte de ventas',0,0,'C');
+    //         // Salto de línea
+    //         $this->Ln(20);
 
-            $this->Cell(10,10, 'Total', 1, 0, 'C', 0);
-            $this->Cell(40,10, 'producto' , 1, 0, 'C', 0);
-            $this->Cell(30,10, 'cantidad', 1, 0, 'C', 0);
-            $this->Cell(110,10,'fecha', 1, 1, 'C', 0);
-        }
+    //         $this->Cell(10,10, 'Total', 1, 0, 'C', 0);
+    //         $this->Cell(40,10, 'producto' , 1, 0, 'C', 0);
+    //         $this->Cell(30,10, 'cantidad', 1, 0, 'C', 0);
+    //         $this->Cell(110,10,'fecha', 1, 1, 'C', 0);
+    //     }
 
-        // Pie de página
-        function Footer()
-        {
-            // Posición: a 1,5 cm del final
-            $this->SetY(-15);
-            // Arial italic 8
-            $this->SetFont('Arial','I',8);
-            // Número de página
-            $this->Cell(0,10,utf8_decode('Página').$this->PageNo().'/{nb}',0,0,'C');
-        }
-    }
-
-	// Creación del objeto de la clase heredada
-    $pdf = new FPDF('P', 'cm', array(10 ,10));
-    $pdf->AliasNbPages();
-    $pdf->AddPage();
-    $pdf->SetFont('Times','',12);
-	$pdf->Cell(10,10, $total, 1, 0, 'c', 0);
-    $pdf->Output();
-
-	
+    //     // Pie de página
+    //     function Footer()
+    //     {
+    //         // Posición: a 1,5 cm del final
+    //         $this->SetY(-15);
+    //         // Arial italic 8
+    //         $this->SetFont('Arial','I',8);
+    //         // Número de página
+    //         $this->Cell(0,10,utf8_decode('Página').$this->PageNo().'/{nb}',0,0,'C');
+    //     }
+    // }
 
 	date_default_timezone_set('America/Bogota');
 	$ahora = date("Y-m-d H:i:s");
@@ -77,5 +67,5 @@
 
             
 
-	//header("Location: ./vender.php?status=1");
+	header("Location: ./vender.php?status=1");
 ?>
