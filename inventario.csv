@@ -1,2 +1,2 @@
-codigo de barras;descripcion;precio venta;precio compra;existecia
-340;borrador;20.00;10.00;122
+codigo de barras;descripcion;iva;precio venta;precio compra;existecia;ubicación
+340;borrador;19;0;500;122;calle2

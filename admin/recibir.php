@@ -19,10 +19,18 @@
 
         $codigo      = !empty($datos[0])  ? ($datos[0]) : '';
         $descripcion = !empty($datos[1])  ? ($datos[1]) : '';
-        $venta       = !empty($datos[2])  ? ($datos[2]) : '';
-        $compra      = !empty($datos[3])  ? ($datos[3]) : '';
-        $existencia  = !empty($datos[4])  ? ($datos[4]) : '';
+        $iva         = !empty($datos[2])  ? ($datos[2]) : '';
+        // $venta       = !empty($datos[3])  ? ($datos[3]) : '';
+        $venta       = 0 ;
+        $compra      = !empty($datos[4])  ? ($datos[4]) : '';
+        $existencia  = !empty($datos[5])  ? ($datos[5]) : '';
+        $ubicacion   = !empty($datos[6])  ? ($datos[6]) : '';
+        
+        $miiva  = intval($iva);
+        $compra = intval($compra);
 
+        $cal = (($compra*$miiva)/100);
+        $precioVenta = $precioCompra + $cal;
         
         $duplicidad = ("SELECT codigo FROM productos WHERE codigo='$codigo' ");
         $ca_dupli = mysqli_query($con, $duplicidad);
@@ -30,17 +38,19 @@
        
         //No existe Registros Duplicados
         if ( $cant_duplicidad == 0 ){
-            $insertar = "INSERT INTO productos VALUES(null, '$codigo', '$descripcion',
-            '$venta', '$compra', $existencia) ";
+            $insertar = "INSERT INTO productos2 VALUES(null, '$codigo', '$descripcion',
+            '$iva','$precioVenta', '$compra', '$existencia', '$ubicacion') ";
 
             mysqli_query($con, $insertar);
         }else{
             //actualizo el o los Registros ya existentes
-            $updateData =  ("UPDATE productos SET 
+            $updateData =  ("UPDATE productos2 SET 
             descripcion='" .$descripcion. "',
-            precioventa='" .$venta. "',
+            iva='" .$iva. "',
+            precioventa='" .$precioVenta. "',
             preciocompra='" .$compra. "',
-            existencia='".$existencia."'
+            existencia='".$existencia."',
+            ubicacion='".$ubicacion."'
             WHERE codigo='".$codigo."'");
             $result_update = mysqli_query($con, $updateData);
         }
