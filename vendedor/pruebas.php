@@ -60,21 +60,26 @@
     $pdf->AddPage( array(10, 100));
     $pdf->SetFont('Times','',10);
 
-    $pdf->Cell(40,5,'Fecha', 1, 0, 'c', 0);
+    $pdf->Cell(45,5,'Fecha', 1, 0, 'c', 0);
     $pdf->Cell(35,5, $data['fecha'      ] , 1, 1, 'c', 0);
-    $pdf->Cell(40,5,'Total:', 1, 0, 'c', 0);
-	$pdf->Cell(35,5, $data['total'      ] , 1, 1, 'c', 0);
+    
 
   
     
-    $pdf->Cell(40,5, 'Producto'      , 1, 0, 'c', 0);
-    $pdf->Cell(35,5, 'Cantidad'       , 1, 1, 'c', 0);
-    $pdf->Cell(40,5, $data['descripcion'] , 1, 0, 'c', 0);
-    $pdf->Cell(35, 5, $data['cantidad'   ] , 1, 1, 'c', 0);
-    while($data = $v2->fetch_assoc()){
-        $pdf->Cell(40,5, $data['descripcion'] , 1, 0, 'c', 0);
-        $pdf->Cell(35, 5, $data['cantidad'   ] , 1, 1, 'c', 0);
+    $pdf->Cell(30,5, 'Producto'       , 1, 0, 'c', 0);
+    $pdf->Cell(15,5, 'Cantidad'       , 1, 0, 'c', 0);
+    $pdf->Cell(35,5, 'Valor unitario' , 1, 1, 'c', 0);
+    $pdf->Cell(30,5, $data['descripcion'] , 1, 0, 'c', 0);
+    $pdf->Cell(15, 5, $data['cantidad'   ] , 1, 0, 'c', 0);
+    $pdf->Cell(35, 5, $data['precioVenta'   ] , 1, 1, 'c', 0);
+    while($data2 = $v2->fetch_assoc()){
+        $pdf->Cell(30,5, $data2['descripcion'] , 1, 0, 'c', 0);
+        $pdf->Cell(15, 5, $data2['cantidad'   ] , 1, 0, 'c', 0);
+        $pdf->Cell(35, 5, $data2['precioVenta'   ] , 1, 1, 'c', 0);
     }
+
+    $pdf->Cell(45,5,'Total:', 1, 0, 'c', 0);
+	$pdf->Cell(35,5, $data['total'      ] , 1, 1, 'c', 0);
 
     
         
