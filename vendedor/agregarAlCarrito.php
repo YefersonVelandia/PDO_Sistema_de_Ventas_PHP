@@ -5,7 +5,7 @@
 
     $codigo = $_POST["codigo"];
     include_once "../conexion.php";
-    $sentencia = $con->prepare("SELECT * FROM productos WHERE codigo = ? LIMIT 1;");
+    $sentencia = $con->prepare("SELECT * FROM productos2 WHERE codigo = ? LIMIT 1;");
     $sentencia->execute([$codigo]);
     $producto = $sentencia->fetch(PDO::FETCH_OBJ);
     # Si no existe, salimos y lo indicamos

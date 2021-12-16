@@ -51,8 +51,8 @@
 	$idVenta = $resultado === false ? 1 : $resultado->id;
 
 	$con->beginTransaction();
-	$sentencia = $con->prepare("INSERT INTO productos_vendidos(id_producto, id_venta, cantidad) VALUES (?, ?, ?);");
-	$sentenciaExistencia = $con->prepare("UPDATE productos SET existencia = existencia - ? WHERE id = ?;");
+	$sentencia = $con->prepare("INSERT INTO productos_vendidos2(id_producto, id_venta, cantidad) VALUES (?, ?, ?);");
+	$sentenciaExistencia = $con->prepare("UPDATE productos2 SET existencia = existencia - ? WHERE id = ?;");
 	foreach ($_SESSION["carrito"] as $producto) {
 		$total += $producto->total;
 		$sentencia->execute([$producto->id, $idVenta, $producto->cantidad]);
