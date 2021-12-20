@@ -94,6 +94,16 @@ select *
 from ventas v inner join productos_vendidos2 p on v.id = p.id_venta 
 inner join productos2 pr on v.id=pr.id where p.id_venta=20;
 
-select *
-from productos2 p inner join productos_vendidos2 pv on p.id = pv.id
+select v.fecha, v.total, p.descripcion, p.iva, p.precioVenta, pv.cantidad
+from ventas v inner join productos_vendidos2 pv on pv.id_venta = v.id
+inner join productos2 p on p.id = pv.id; 
+
+from productos2 p inner join productos_vendidos2 pv on pv.venta = 
 inner join ventas v on v.id= p.id;
+
+
+ select v.fecha, v.total, pr.descripcion ,pr.precioVenta, p.cantidad from ventas v inner join productos_vendidos2 p on v.id = p.id_venta
+ inner join productos2 pr on pr.id = p.id_producto where v.id=21;
+ 
+ 
+ id_producto;

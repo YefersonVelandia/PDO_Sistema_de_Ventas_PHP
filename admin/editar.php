@@ -10,6 +10,17 @@
 		exit();
 	}
 
+    include_once '../restringir.php';
+
+    if(!isset($_SESSION['id_fk'])){
+		header('location: ./index.php');
+	}else {
+		
+		if($_SESSION['id_fk'] != 1){
+			header('location: ../vendedor/index.php');
+		}
+	}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

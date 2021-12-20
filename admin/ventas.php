@@ -8,6 +8,16 @@
 <?php 
 	include_once "./header.php";
 	include_once './adminNavbar.php';
+	include_once '../restringir.php';
+
+    if(!isset($_SESSION['id_fk'])){
+		header('location: ./index.php');
+	}else {
+		
+		if($_SESSION['id_fk'] != 1){
+			header('location: ../vendedor/index.php');
+		}
+	}
 ?>
 
 <div class="container">

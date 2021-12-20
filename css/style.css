@@ -7,6 +7,18 @@ body{
     background-color: #ffffff;
 }
 
+.buscador{
+    border-radius: 20px;
+    border: 1px solid #BCBCD0;
+    margin: 15px;
+    padding: 3px;
+    background-image: url(../images/buscador.png);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-position: calc(100% - 15px);
+    padding-left: 15px;
+  }
+
 .centrar{
     display: flex;
     justify-content: center;

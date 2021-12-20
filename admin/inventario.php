@@ -8,19 +8,36 @@
 <?php
     include_once './header.php';
     include_once './adminNavbar.php';
+    include_once '../restringir.php';
+
+    if(!isset($_SESSION['id_fk'])){
+		header('location: ./index.php');
+	}else {
+		
+		if($_SESSION['id_fk'] != 1){
+			header('location: ../vendedor/index.php');
+		}
+	}
 ?>
 
 <body>
 
-
     <div class="container"> 
         <div class="row">
             <div class="col-lg-12">
+                
             <h1>Productos</h1>
-            <div>
+        
                 <a class="btn btn-success" href="./ingresarProducto.php">Nuevo</a>
-            </div>
+            
             <br>
+
+        
+            <div class="col-8">
+                <input class="buscador" type="search"
+                id="busqueda"  placeholder="  Buscar..." >
+            </div>
+        
 
             <table class="table table-bordered">
                 <thead>
@@ -37,7 +54,7 @@
                         <th>PMP</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="idTabla">
                     <?php foreach($productos as $producto){ ?>
                     <tr>                        
                         <td><?php echo $producto->codigo ?></td>
@@ -62,3 +79,14 @@
 <?php include_once './footer.php' ?>
 </body>
 </html>
+
+<script>
+$(document).ready(function(){
+  $("#busqueda").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#idTabla tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
