@@ -7,7 +7,19 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include_once './header.php'; ?>
+<?php 
+    include_once './header.php';
+    include_once '../restringir.php';
+
+    if(!isset($_SESSION['id_fk'])){
+		header('location: ./index.php');
+	}else {
+		
+		if($_SESSION['id_fk'] != 2){
+			header('location: ../admin/index.php');
+		}
+	} 
+?>
 <body>
 <div class="container">
     <div class="row">

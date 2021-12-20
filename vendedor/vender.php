@@ -4,6 +4,17 @@
 	include_once './navBar.php'; 
 	if(!isset($_SESSION["carrito"])) $_SESSION["carrito"] = [];
 	$granTotal = 0;
+
+	include_once '../restringir.php';
+
+    if(!isset($_SESSION['id_fk'])){
+		header('location: ./index.php');
+	}else {
+		
+		if($_SESSION['id_fk'] != 2){
+			header('location: ../admin/index.php');
+		}
+	}
 ?>
 	<div class="container">
 		<div class="row">
