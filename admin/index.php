@@ -8,7 +8,7 @@
     include_once '../restringir.php';
 
     if(!isset($_SESSION['id_fk'])){
-		header('location: ./index.php');
+		header('location: ../index.php');
 	}else {
 		
 		if($_SESSION['id_fk'] != 1){

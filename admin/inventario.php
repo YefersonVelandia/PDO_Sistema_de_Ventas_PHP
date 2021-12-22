@@ -66,7 +66,7 @@
                         <td><?php echo $producto->ubicacion ?></td>
                         <td><a class="btn btn-warning" href="<?php echo "editar.php?id=" . $producto->id?>"><img src="../images/edit.png" alt=""></a></td>
                         <td><a class="btn btn-danger" href="<?php echo "eliminar.php?id=" . $producto->id?>"><img src="../images/bin.png" alt=""></a></td>
-                        <td><a class="btn btn-success" href="" alt=""> <img src="../images/add2.png" alt=""> </a></td>
+                        <td><a class="btn btn-success" href="<?php echo "pmp.php?id=" . $producto->id?>" alt="" > <img src="../images/add2.png" alt=""> </a></td>
                     </tr>
                     <?php } ?>
                 </tbody>
@@ -75,6 +75,25 @@
         </div>
     </div>
     
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Precio medio ponderado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <?php
+        ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php include_once './footer.php' ?>
 </body>

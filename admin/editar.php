@@ -163,7 +163,7 @@
                 <input value="<?php echo $producto->ubicacion ?>" class="form-control" name="ubicacion" required type="text" id="ubicacion" placeholder="Bodega X">
           
 				<br><br><input class="btn btn-info" type="submit" va	lue="Guardar">
-				<a class="btn btn-warning" href="./listar.php">Cancelar</a>
+				<a class="btn btn-warning" href="./inventario.php">Cancelar</a>
 			</form>
 		</div>
 	</div>
