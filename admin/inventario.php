@@ -11,7 +11,7 @@
     include_once '../restringir.php';
 
     if(!isset($_SESSION['id_fk'])){
-		header('location: ./index.php');
+		header('location: ../index.php');
 	}else {
 		
 		if($_SESSION['id_fk'] != 1){
@@ -38,7 +38,11 @@
                 id="busqueda"  placeholder="  Buscar..." >
             </div>
         
-
+            <?php
+                if( isset ($pmpExisto)){
+                    echo $pmpExisto;
+                }
+            ?>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -60,8 +64,8 @@
                         <td><?php echo $producto->codigo ?></td>
                         <td><?php echo $producto->descripcion ?></td>
                         <td><?php echo $producto->iva ?>%</td>
-                        <td><?php echo $producto->precioCompra ?></td>
-                        <td><?php echo $producto->precioVenta ?></td>
+                        <td><?php echo number_format($producto->precioCompra) ?></td>
+                        <td><?php echo number_format($producto->precioVenta) ?></td>
                         <td><?php echo $producto->existencia ?></td>
                         <td><?php echo $producto->ubicacion ?></td>
                         <td><a class="btn btn-warning" href="<?php echo "editar.php?id=" . $producto->id?>"><img src="../images/edit.png" alt=""></a></td>
